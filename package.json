@@ -1,0 +1,34 @@
+{
+  "name": "Neihoo.com",
+  "version": "1.0.0",
+  "description": "End to end sample for running Node.JS applications on Google Cloud Platform",
+  "repository": "https://github.com/GoogleCloudPlatform/nodejs-getting-started",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "monitor": "nodemon app.js",
+    "deploy": "gcloud preview app deploy app.yaml",
+    "lint": "jshint --exclude-path=../.gitignore .",
+    "mocha": "mocha test/*.test.js -t 30000",
+    "test": "npm run lint && npm run mocha"
+  },
+  "author": "Angela_CMU",
+  "contributors": [
+    {
+      "name": "Angela Gao",
+      "email": "gycwyx@gmail.com"
+    }
+  ],
+  "license": "Apache Version 2.0",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1",
+    "mocha": "^2.4.5",
+    "supertest": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=0.12.7"
+  }
+}
